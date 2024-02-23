@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/a155253d3e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="music-div">
+      <div class="control">
+        <i class="controller fa-solid fa-play fa-5x"></i>
+      </div>
+      <audio
+        volume="0.1"
+        class="audio-song"
+        src="/audio/videoplayback.m4a"
+        loop
+      ></audio>
+    </div>
+    <div class="volume-bar">
+      <input
+        class="bar"
+        type="range"
+        id="volume-slider"
+        min="0"
+        max="100"
+        value="50"
+      />
+      <p class="volume-text">Volume</p>
+    </div>
+    <div class="background-div">
+      <div class="main-image">
+        <img class="lord-name" src="/images/Name.png" alt="" />
+        <img class="main-photo" src="/images/final-img.png" alt="" />
+      </div>
+    </div>
+    <div class="second-div">
+      <div class="main-content">
+        <a href="/register"><p>Learn Hanuman Chalisa</p></a>
+      </div>
+    </div>
+
+    <div class="footer-div">
+      <p class="footer-text">Connect with me</p>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/pathakanshu/" target="_blank"
+          ><i class="fa-3x fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/anshu_pathak_cs/" target="_blank"
+          ><i class="fa-3x fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://github.com/anshU-p-aThAk" target="_blank"
+          ><i class="fa-3x fa-brands fa-github"></i
+        ></a>
+      </div>
+      <div class="credit">
+        <p>Credit for Images - Tips Official</p>
+      </div>
+    </div>
+
+    <script>
+      const ctrl = document.querySelector(".controller");
+      const song = document.querySelector(".audio-song");
+      const volumeSlider = document.getElementById("volume-slider");
+      song.volume = 0.5;
+
+      function playPause() {
+        if (ctrl.classList.contains("fa-pause")) {
+          song.pause();
+          ctrl.classList.remove("fa-pause");
+          ctrl.classList.add("fa-play");
+        } else {
+          song.play();
+          ctrl.classList.remove("fa-play");
+          ctrl.classList.add("fa-pause");
+        }
+      }
+
+      function adjustVolume() {
+        const volumeValue = volumeSlider.value;
+        song.volume = volumeValue / 100;
+      }
+
+      ctrl.addEventListener("click", playPause);
+      volumeSlider.addEventListener("input", adjustVolume);
+    </script>
+  </body>
+</html>

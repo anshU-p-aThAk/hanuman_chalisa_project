@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3.5%;
+}
+
+.main-img {
+  border-radius: 10px;
+  margin-top: 1.5%;
+  width: 40vw;
+  height: inherit;
+  box-shadow: 10px 10px 30px orange, -10px -10px 30px orange;
+  transition: opacity 0.5s ease-in-out; /* Add a smooth transition effect */
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.text-transition {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.text-transition.slide-out {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.text-transition.slide-in {
+  transform: translateX(0);
+}
+
+.second-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2%;
+}
+
+.text-div {
+  padding: 0 1%;
+  text-align: center;
+  border: 8px groove orange; /* Changed to a groove border */
+  width: 45%;
+  height: 42vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: orange;
+  position: relative;
+}
+
+
+.next {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* CSS */
+
+
+
+.button-5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-5:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-5:hover {
+  transform: translateY(-1px);
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.back-btn {
+  margin: 0;
+}
+
+.translation-div {
+  border: 1px solid black;
+  width: 45%;
+  height: 42vh;
+}
